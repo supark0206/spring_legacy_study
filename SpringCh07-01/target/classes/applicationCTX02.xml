@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xmlns:c="http://www.springframework.org/schema/c"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "stu2" class="com.spring.ex.Student">
+	<!--생성자가있을때는 constructor-arg 사용 -->
+		<constructor-arg value = "박보영"/>    
+		<constructor-arg value = "27"/>
+		<constructor-arg>
+			<list>
+				<value>달리기</value>
+				<value>야구</value>
+				<value>축구</value>
+			</list>
+		</constructor-arg>
+		<!--생성자가없을때는 property 사용 -->
+		<property name="height" value = "163"></property>
+		<property name="weight" value = "48"></property>
+	</bean>
+	<!-- c액션 태그 사용하는법. -->
+	<bean id = "fam" class="com.spring.ex.Family" c:papa="박보영아빠" c:mama="박보영엄마" p:bro="박보영오빠" p:sis="박보영언니"> 
+	</bean>
+
+
+</beans>
+	

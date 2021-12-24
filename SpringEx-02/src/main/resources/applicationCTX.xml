@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd	
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<context:property-placeholder location="classpath:pencil2B.properties,classpath:pencilHB.properties"/>
+
+	<bean id = "pencil2b" class="com.spring.ex.Pencil" >
+		<property name="price">
+			<value>${pencil_2B.price}</value>
+		</property>
+		<property name="name" value="">
+			<value>${pencil_2B.name}</value>
+		</property>
+		<property name="color">
+			<value>${pencil_2B.color}</value>
+		</property>
+	</bean>
+	
+	
+		<bean id = "pencil3b" class="com.spring.ex.Pencil">
+			<constructor-arg value="${pencil_2B.name}"/>
+			<constructor-arg value="삼비"/>
+			<constructor-arg value="황금색"/>
+		</bean>
+		
+		
+		<bean id = "pencilhb" class="com.spring.ex.Pencil">
+		<property name="price">
+			<value>${pencil_HB.price}</value>
+		</property>
+		<property name="name">
+			<value>${pencil_HB.name}</value>
+		</property>
+		<property name="color">
+			<value>${pencil_HB.color}</value>
+		</property>
+	</bean>
+	
+
+
+
+</beans>
+	

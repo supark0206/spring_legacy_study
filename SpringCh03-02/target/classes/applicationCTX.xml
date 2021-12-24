@@ -1,0 +1,49 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "stu1" class="com.spring.ex.Student">
+		<constructor-arg>
+			<value>박정현</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>24</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>융소과</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>3</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>a</value>
+		</constructor-arg>									
+	</bean>	
+	
+	<bean id = "stu2" class="com.spring.ex.Student">
+		<constructor-arg value = "조인성"/>
+		<constructor-arg value = "34"/>
+		<constructor-arg value = "공연예술과"/>
+		<constructor-arg value = "1"/>
+		<constructor-arg value = "b"/>								
+	</bean>	
+	
+	<bean id = "stu3" class="com.spring.ex.Student">
+		<constructor-arg value = "태연"/>
+		<constructor-arg value = "32"/>
+		<constructor-arg value = "효충사관과"/>
+		<constructor-arg value = "1"/>
+		<constructor-arg value = "a"/>								
+	</bean>	
+	
+	<bean id = "stu4" class="com.spring.ex.StudentInfo">
+		<constructor-arg>
+			<ref bean = "stu2"/>
+		</constructor-arg>
+	</bean>
+
+
+</beans>
+	

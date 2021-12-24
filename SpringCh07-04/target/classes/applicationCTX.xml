@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- scope 범위지정 -->
+	<!-- 디폴트값이 singleton이여서 안써줘도 자동으로 적용된다 -->
+	<!-- prototype 으로 바꾸면 다른 메모리에 세팅해준다 -->
+	<bean id = "stu" class="com.spring.ex.Student" scope="singleton">
+		<constructor-arg value = "박정현"/>
+		<constructor-arg value = "24"/>
+	</bean>
+
+</beans>

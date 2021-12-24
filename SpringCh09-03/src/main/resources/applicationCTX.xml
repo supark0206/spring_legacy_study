@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/aop/spring-aop.xsd">
+
+
+	<bean id = "log" class="com.spring.ex.LogAop"/>
+	
+	<aop:config>
+		<aop:aspect id="logger" ref="log">
+			<aop:pointcut expression="within(com.spring.ex.*)" id="publicM"/>
+			<aop:around pointcut-ref="publicM" method="loggerAOP"/>
+		</aop:aspect>
+	</aop:config>
+	
+	<bean id="stu" class="com.spring.ex.Student">
+		<property name="name" value="박정현"/>
+		<property name="age" value="24"/>
+		<property name="gradeNum" value="4"/>
+		<property name="classNum" value="심화"/>
+	</bean>
+	
+	<bean id="work" class="com.spring.ex.Worker">
+		<property name="name" value="정해인"/>
+		<property name="age" value="25"/>
+		<property name="job" value="배우"/>
+	</bean>
+</beans>
+	

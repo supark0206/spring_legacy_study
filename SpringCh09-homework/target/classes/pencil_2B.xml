@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd"
+	profile="2B">
+
+	<bean id="pencil" class="com.spring.ex.Pencil">
+		<property name="name" value="2B"/>
+		<property name="price" value="2000원"/>
+		<property name="color" value="노랑색"/>
+		<property name="length" value="4cm"/>
+	</bean>
+	
+	
+</beans>	
